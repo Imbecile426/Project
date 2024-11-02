@@ -1,1 +1,42 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 0, 10);
+}
 
+#stars {
+    position: fixed; /* Fixed position to stay in the viewport */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none; /* Allow clicks to pass through */
+    overflow: hidden; /* Hide overflow */
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0.35; 
+    }/*adjust star twinkling here*/
+    50%{
+        opacity: 0.75;
+    }
+    100% {
+        opacity: 1; 
+    }
+}
+
+.content {
+    position: relative;
+    z-index: 1; /* Ensure content is above stars */
+    color:  white;
+}
