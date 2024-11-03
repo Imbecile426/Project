@@ -50,3 +50,15 @@ $(document).ready(function() {
         });
     });
 });
+
+$(window).scroll(function () {
+    var scrollPosition = $(this).scrollTop();
+    var center = $("#center");
+
+    if (scrollPosition > 1) {
+        center.slideUp(1000);
+    } else {
+        center.slideDown(1000);
+    }
+
+});
