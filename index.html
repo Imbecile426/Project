@@ -1,24 +1,42 @@
-<html>
-  <head>
-    <title>GR Space</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel ="stylesheet" href="bootstrap.min.css">
-    <script src = "jquery-3.7.1.min.js"></script>
-    <script src = "bootstrap.bundle.min.js"></script>
-    <link rel ="stylesheet" href="styles.css">
-    <script src = "script.js"></script>
-  </head>
-  <body>
+    <title>GR Space</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
     <div id="stars"></div>
     <div class="content">
-      <center id="center">
-        <div id="titleContainer">
-        <h1 id="title">GR SPACE</h1>
+        <div id="center">
+            <div id="context">
+                <div id="titleContainer">
+                    <h1 id="title">GR SPACE</h1>
+                </div>
+                <p>A page on space</p>
+            </div>
+            <div id="topbuttons">
+                <button type="button" class="btn btn-info">HELP</button>
+                <button type="button" class="btn btn-info">INFO</button>
+                <button type="button" class="btn btn-info">CONTACT</button>
+            </div>
         </div>
-        <p>A page on space </p>
-      </center>
-        <div style="height: 200vh;"></div> <!-- Just to create scrollable content -->
+        <div id="StartingPage">
+          <div>
+            <h1 id="spacetxt">SPACE</h1>
+          </div>
+          <div>
+            <i class="arrow down" id="arrow_down"></i>
+          </div>
+        </div>
+        <div style="height: 1000vh;">
+            <canvas id="earthCanvas"></canvas>
+        </div> <!-- Scrollable content -->
     </div>
-  </body>
+</body>
 </html>
