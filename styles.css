@@ -84,15 +84,15 @@ body, html {
 }
 #earth{
     background: url('renders/earth/0000.png') no-repeat center;
-    animation: rotateEarth 7s  infinite;
+    animation: rotateEarth 12s  infinite;
 }
 #sun{
     background: url('renders/sun/0000.png') no-repeat center;
-    animation: rotateSun 8s  infinite;
+    animation: rotateSun 17s  infinite;
 }
 #moon{
     background: url('renders/moon/0000.png') no-repeat center;
-    animation: rotateEarth 6s  infinite;
+    animation: rotateMoon 14s  infinite;
 }
 #StartingPage {
     height: 100vh;
