@@ -96,7 +96,7 @@ body, html {
     background: url('renders/earth/0000.png') no-repeat center;
     animation: rotateEarth 12s  infinite;
 }
-#sun{
+#sun,#sunsun{
     scale: 0.7;
     background: url('renders/sun/0000.png') no-repeat center;
     animation: rotateSun 17s  infinite;
@@ -865,7 +865,7 @@ ol.alternating-colors-moon {
     width: 80%; 
 }
 
-.close {
+.close,.closee {
     color: #aaa;
     float: right;
     font-size: 28px;

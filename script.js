@@ -15,7 +15,7 @@ it returns boolean value*/
     if (isMobileDevice) { 
         console.log("You are using a Mobile Device"); 
     } else { 
-        $('#phonewarning').hide();
+        $('.phonewarning').hide();
     }
     var popup = document.getElementById("popup");
     var close = document.getElementsByClassName("close")[0];
@@ -184,3 +184,34 @@ it returns boolean value*/
     createStars();
     titleHoverEffect();
 });
+function showhelp(){
+    $('#help').show();
+    /* Storing user's device details in a variable*/
+    let details = navigator.userAgent; 
+
+    /* Creating a regular expression  
+    containing some mobile devices keywords  
+    to search it in details string*/
+    let regexp = /android|iphone|kindle|ipad/i; 
+
+    /* Using test() method to search regexp in details 
+    it returns boolean value*/
+    let isMobileDevice = regexp.test(details); 
+
+    if (isMobileDevice) { 
+        console.log("You are using a Mobile Device"); 
+    } else { 
+        $('.phonewarning').hide();
+    }
+    var popupe = document.getElementById("help");
+    var closee = document.getElementsByClassName("closee")[0];
+
+    // Show the popup
+    popupe.style.display = "block";
+
+    // Close the popup when the user clicks on <span> (x)
+    closee.onclick = function() {
+        popupe.style.display = "none";
+    
+    };
+    }

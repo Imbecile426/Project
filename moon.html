@@ -13,15 +13,25 @@
             <div id="center">
                 <div id="context">
                     <div id="titleContainer">
-                        <h1 id="title">GR SPACE</h1>
+                        <h1 onclick ="window.location.href='index.html';"id="title" style="cursor: pointer;"">GR SPACE</h1>
                     </div>
                     <p>A page on space</p>
                 </div>
                 <div style="text-align: center;"><h1 style="padding: 30px;">Moon</h1></div>
                 <div id="topbuttons">
-                    <button type="button" class="btn btn-info">HELP</button>
+                    <button type="button" class="btn btn-info" onclick="showhelp();window.location.href='#help';">HELP</button>
                     <a href="Index.html#contact" class="btn btn-info">INFO</a>
                     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=spacegr@gmail.com" class="btn btn-info" target="_blank">CONTACT</a>
+                </div>
+            </div>
+            <div id="helpmoon" class="popup" style="color: black;">
+                <div class="popup-content">
+                    <span class="close">&times;</span>
+                    <h2>Help</h2>
+                    <ul><li><h2>Images not loading ?</h2></li></ul><p>Make Sure Your Connected To The Internet</p>
+                    <ul><li>Models Flickering ?</li><p>Give them atleast 12 seconds to load don't refresh in between.</p></ul>
+                    <div class="phonewarning"><h1 style="color: red">You are using a phone!</h1><br>Flip the Phone Horizontally for best
+                    experience</div>
                 </div>
             </div>
             <center>

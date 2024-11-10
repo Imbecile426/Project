@@ -19,7 +19,7 @@
             <p>Thank you for visiting. Due to the limited number of resources allowed for the competition, 
                 our planet animations might flicker please wait a few seconds for them to load correctly...<br>
             Thanks for your paitence!<br>REFRESING WILL CAUSE FLICKERING AGAIN!</p>
-            <div id="phonewarning"><h1 style="color: red">You are using a phone!</h1><br>Flip the Phone Horizontally for best
+            <div class="phonewarning"><h1 style="color: red">You are using a phone!</h1><br>Flip the Phone Horizontally for best
             experience</div>
         </div>
     </div>
@@ -37,9 +37,19 @@
                 <h1 id="Moon">Moon</h1>
             </div>
             <div id="topbuttons">
-                <button type="button" class="btn btn-info">HELP</button>
+                <button type="button" class="btn btn-info" onclick="showhelp();window.location.href='#help';">HELP</button>
                 <a href="#contact" class="btn btn-info">INFO</a>
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=spacegr@gmail.com" class="btn btn-info" target="_blank">CONTACT</a>
+            </div>
+        </div>
+        <div id="help" class="popup" style="color: black;">
+            <div class="popup-content">
+                <span class="closee">&times;</span>
+                <h2>Help</h2>
+                <ul><li><h2>Images not loading ?</h2></li></ul><p>Make Sure Your Connected To The Internet</p>
+                <ul><li>Models Flickering ?</li><p>Give them atleast 12 seconds to load don't refresh in between.</p></ul>
+                <div class="phonewarning"><h1 style="color: red">You are using a phone!</h1><br>Flip the Phone Horizontally for best
+                experience</div>
             </div>
         </div>
         <div id="StartingPage">
@@ -83,7 +93,7 @@
                       <p>A stream of charged particles flowing from the corona, influencing space weather.</p>
                     </li>
                   </ol>
-                  <a>Learn More...</a>
+                  <a href="sun.html">Learn More...</a>
             </div>
         </div>
         <div id="earthdiv">

@@ -1,6 +1,6 @@
 
 $(document).ready(function() {
-    $("#helpmoon"),hide();
+    $('#helpsun').hide();
     const radius = 100; // Globe radius in pixels
     let angle = 0; // Initial rotation angle
     let spacetxt = $('#spacetxt');
@@ -74,11 +74,10 @@ $(document).ready(function() {
             handleExpansion(scrollTop)
         }
     });
-
     createStars();
 });
 function showhelp(){
-    $('#helpmoon').show();
+    $('#helpsun').show();
     /* Storing user's device details in a variable*/
     let details = navigator.userAgent; 
 
@@ -96,7 +95,7 @@ function showhelp(){
     } else { 
         $('.phonewarning').hide();
     }
-    var popup = document.getElementById("helpmoon");
+    var popup = document.getElementById("helpsun");
     var close = document.getElementsByClassName("close")[0];
 
     // Show the popup
