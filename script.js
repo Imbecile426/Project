@@ -1,4 +1,34 @@
+
 $(document).ready(function() {
+    /* Storing user's device details in a variable*/
+    let details = navigator.userAgent; 
+  
+    /* Creating a regular expression  
+    containing some mobile devices keywords  
+    to search it in details string*/
+    let regexp = /android|iphone|kindle|ipad/i; 
+
+    /* Using test() method to search regexp in details 
+it returns boolean value*/
+    let isMobileDevice = regexp.test(details); 
+  
+    if (isMobileDevice) { 
+        console.log("You are using a Mobile Device"); 
+    } else { 
+        $('#phonewarning').hide();
+    }
+    var popup = document.getElementById("popup");
+    var close = document.getElementsByClassName("close")[0];
+
+    // Show the popup
+    popup.style.display = "block";
+
+    // Close the popup when the user clicks on <span> (x)
+    close.onclick = function() {
+        popup.style.display = "none";
+        initialAnimations();
+    };
+
     const radius = 100; // Globe radius in pixels
     let angle = 0; // Initial rotation angle
     let spacetxt = $('#spacetxt');
@@ -33,6 +63,7 @@ $(document).ready(function() {
                 left: Math.random() * windowWidth + 'px',
                 animation: `twinkle ${twinkleDuration} infinite alternate` // Apply animation
             });
+            $('#stars').append(star); // Add star to the container
             $('#stars').append(star); // Add star to the container
         }
     }
@@ -149,7 +180,7 @@ $(document).ready(function() {
     }
 
     // Initialize everything
-    initialAnimations();
+    
     createStars();
     titleHoverEffect();
 });
