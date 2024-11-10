@@ -1,0 +1,110 @@
+/* Basic Styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #111; /* Dark space-like background */
+    overflow-x: hidden;
+    color: #e0e0e0; /* Soft white color for text */
+    font-family: 'Space Mono', monospace;
+}
+
+/* Dim overlay effect */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8); /* Darker overlay */
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+/* Content styling */
+.content {
+    position: relative;
+    z-index: 3;
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Page header */
+#moon-page-header {
+    margin-bottom: 40px;
+}
+
+#moon-page-header h1 {
+    font-size: 3em;
+    margin-bottom: 0.2em;
+    color: #f0f0f0; /* Light gray for the heading */
+}
+
+#moon-page-header p {
+    font-size: 1.5em;
+    color: #d0d0d0; /* Slightly darker gray for description */
+}
+
+/* Sections and hover effect */
+.moon-section {
+    margin: 20px 0;
+    padding: 25px;
+    border: 1px solid #333; /* Dark border */
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.moon-section:hover {
+    transform: translateY(-10px) scale(1.05);
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly brighter on hover */
+    z-index: 4;
+}
+
+.moon-section:hover h2 {
+    color: #f8f8f8; /* Soft white on hover */
+}
+
+.moon-section h2 {
+    color: #d0d0d0; /* Grayish color for headings */
+    font-size: 1.8em;
+}
+
+.moon-section p {
+    font-size: 1.1em;
+    line-height: 1.6em;
+    color: #c0c0c0; /* Light gray text color for paragraphs */
+}
+
+/* Button styling */
+.btn {
+    display: block;
+    margin: 30px auto;
+    text-align: center;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    background-color: #2c3e50; /* Dark gray-blue color */
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.btn:hover {
+    background-color: #34495e; /* Lighter dark blue-gray on hover */
+}
+
+/* Styling the moon image, if included */
+.moon-image {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); /* Subtle glowing effect around moon image */
+}
+
+.moonht {
+    margin-bottom: 100px;
+}

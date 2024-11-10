@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planet Earth - GR Space</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="earth.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="overlay"></div> <!-- Dim background on hover -->
+    <div id="stars"></div>
+    <div class="content">
+        <div id="earth-page-header">
+            <h1>Planet Earth</h1>
+            <p>Explore the layers and phenomena of our home planet.</p>
+        </div>
+        <div id="earth-sections">
+            <section id="crust" class="earth-section">
+                <h2>Crust</h2>
+                <p>The outermost layer of Earth, composed of solid rock and minerals. It’s where all terrestrial life exists.</p>
+            </section>
+            <section id="mantle" class="earth-section">
+                <h2>Mantle</h2>
+                <p>A thick layer beneath the crust made of semi-solid rock. Convection currents here drive tectonic plate movement.</p>
+            </section>
+            <section id="outer-core" class="earth-section">
+                <h2>Outer Core</h2>
+                <p>A layer of molten iron and nickel, creating Earth's magnetic field through its flowing currents.</p>
+            </section>
+            <section id="inner-core" class="earth-section">
+                <h2>Inner Core</h2>
+                <p>The solid, dense center of Earth, primarily composed of iron and nickel, reaching temperatures similar to the surface of the Sun.</p>
+            </section>
+            <section id="atmosphere" class="earth-section">
+                <h2>Atmosphere</h2>
+                <p>Earth’s protective layer of gases, essential for life, which shields us from harmful solar radiation and maintains climate.</p>
+            </section>
+            <section id="hydrosphere" class="earth-section">
+                <h2>Hydrosphere</h2>
+                <p>The water component of Earth, including oceans, rivers, lakes, and glaciers, covering about 71% of Earth’s surface.</p>
+            </section>
+            <center>
+                <div class="animation-container ml-200 mt-5 earthht" id="earth"></div>
+            </center>
+            <a href="index.html" class="btn btn-info">Back to Main Page</a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="earth.js"></script>
+</body>
+</html>

@@ -1,5 +1,13 @@
 
 $(document).ready(function() {
+    const radius = 100; // Globe radius in pixels
+    let angle = 0; // Initial rotation angle
+    let spacetxt = $('#spacetxt');
+    let downarrow = $('#arrow_down');
+    let lastScrollTop = 0;
+    let isExpanded = true;
+    let planet = 'Home';
+
     /* Storing user's device details in a variable*/
     let details = navigator.userAgent; 
   
@@ -19,23 +27,26 @@ it returns boolean value*/
     }
     var popup = document.getElementById("popup");
     var close = document.getElementsByClassName("close")[0];
-
+    if (!getCookie('welcomePopupSeen')) {
     // Show the popup
     popup.style.display = "block";
-
+    console.log('cookie found');
+    }
+    else{
+        initialAnimations();
+        console.log('nope');
+    }
     // Close the popup when the user clicks on <span> (x)
     close.onclick = function() {
-        popup.style.display = "none";
+        $('#popup').animate({
+            opacity:0,
+        },1000,function () {
+            popup.style.display = "none";
+        });
         initialAnimations();
+        document.cookie = "welcomePopupSeen=true; max-age=" + 60 * 60;
     };
 
-    const radius = 100; // Globe radius in pixels
-    let angle = 0; // Initial rotation angle
-    let spacetxt = $('#spacetxt');
-    let downarrow = $('#arrow_down');
-    let lastScrollTop = 0;
-    let isExpanded = true;
-    let planet = 'Home';
 
     $('a[href^="#"]').on('click', function(e) {
         e.preventDefault();
@@ -47,7 +58,9 @@ it returns boolean value*/
 
     // Initial animations for `spacetxt` and `downarrow`
     function initialAnimations() {
-        spacetxt.animate({ top: '+=200px', opacity: 1 }, 1000, function() {
+        var moveSpace = $(window).width() <= 768 ? 140 : 200; // 150px for phone, 200px for laptop
+        console.log(moveSpace);
+        spacetxt.animate({ top: `+=${moveSpace}px`, opacity: 1 }, 1000, function() {
             downarrow.animate({ opacity: 1 }, 1000);
         });
     }
@@ -87,7 +100,7 @@ it returns boolean value*/
     function handleExpansion(scrollTop) {
         if (scrollTop < 100 && !isExpanded) {
             isExpanded = true;
-            $("#center").stop(true, true).animate({ height: '150px' });
+            $("#center").stop(true, true).animate({ height: '178px' });
             $('#topbuttons').css({ transform: 'scale(1)' });
             $('#context').stop(true, true).animate({ left: '0px' }).css({ transform: 'scale(1)' });
         } else if (scrollTop >= 100 && isExpanded) {
@@ -170,11 +183,11 @@ it returns boolean value*/
     function titleHoverEffect() {
         $("#titleContainer").hover(function() {
             $("#title").stop().fadeOut(300, function() {
-                $(this).text("Garv & Ronit's space").fadeIn(300); // Change text
+                $(this).text("Made by Ronit & Garv").fadeIn(300); // Change text
             });
         }, function() {
             $("#title").stop().fadeOut(300, function() {
-                $(this).text('GR SPACE').fadeIn(300); // Revert text
+                $(this).text('Lunar Arc').fadeIn(300); // Revert text
             });
         });
     }
@@ -215,3 +228,9 @@ function showhelp(){
     
     };
     }
+// Function to check if a specific cookie exists
+function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    return parts.length === 2 ? parts.pop().split(';').shift() : null;
+}
